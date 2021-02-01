@@ -1,4 +1,5 @@
 # Web Crawler
+Simple web crawler that starts off with an initial url and prints all the links visited.
 
 # Version
 - Currently using go version 1.15.5
