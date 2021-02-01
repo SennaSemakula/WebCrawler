@@ -93,7 +93,8 @@ func (c *Crawler) ParseHTML(r io.Reader) ([]string, error) {
 			isAnchor := t.Data == "a"
 			if isAnchor {
 				for _, u := range t.Attr {
-
+					// TODO:
+					// Maybe there may be an absolute link with monzo so create a function to validate the domain that takes in a url as a tring
 					if uri := strings.HasPrefix(u.Val, "/"); !uri {
 						continue
 					}

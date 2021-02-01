@@ -116,3 +116,12 @@ func TestHTMLParse(t *testing.T) {
 	})
 
 }
+
+func BenchmarkCrawl(b *testing.B) {
+	url := "https://monzo.com"
+
+	var crawl *Crawler
+	c, _ := crawl.New(url)
+
+	c.Crawl(c.url, 0)
+}
