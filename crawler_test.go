@@ -39,7 +39,7 @@ func TestFetch(t *testing.T) {
 }
 
 
-func TestCrawlL(t *testing.T) {
+func TestCrawl(t *testing.T) {
 	cache := make(map[string][]string)
 	c := Crawler{"https://monzo.com", []string{}, 0, cache}
 

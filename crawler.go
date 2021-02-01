@@ -73,8 +73,6 @@ func (c *Crawler) ParseHTML(r io.Reader) ([]string, error) {
 					if uri := strings.HasPrefix(u.Val, "/"); !uri {
 						continue
 					}
-
-					// This proably should have been moved for single reponsibility 
 					if _, ok := c.cache[c.url + u.Val]; ok {
 						continue
 					}
